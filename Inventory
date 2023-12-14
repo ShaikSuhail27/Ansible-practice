@@ -1,5 +1,5 @@
 [ansiblehost]
 18.208.139.63
 
-[vars]
+[ansiblehost:vars]
 USERNAME=suhail

@@ -1,0 +1,5 @@
+- name: Variables from inventory level
+  hosts: localhost
+  tasks:
+  - name: printing the variables from inventory level
+  

@@ -1,2 +1,3 @@
 [ansiblehost]
 18.208.139.63
+INVENTORY_USERNAME: suhail

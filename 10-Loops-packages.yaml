@@ -4,8 +4,8 @@
   tasks:
   - name: multiple packages installation
     ansible.builtin.yum:
-    name: "{{item}}"
-    state: installed
+      name: "{{item}}"
+      state: installed
     loop:
     - nginx
     - postfix

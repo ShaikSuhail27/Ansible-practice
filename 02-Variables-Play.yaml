@@ -1,0 +1,9 @@
+- name: Variables in a play level
+  hosts: localhost
+  vars:
+    COURSE: "DEVOPS"
+    NAME: 'SUHAIL'
+  tasks:
+  - name: printing the Play Variables
+    ansible.builtin.debug:
+      msg: "My name is {{NAME}} and i am learning {{COURSE}}"

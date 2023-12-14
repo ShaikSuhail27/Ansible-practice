@@ -1,0 +1,14 @@
+- name: Variables in a task level
+  hosts: localhost
+  vars:
+    NAME: "SUHAIL"
+    COURSE: "DEVOPS"
+  tasks:
+  - name: Printing the variables from play level
+    ansible.builtin.debug:
+      msg: "My name is {{NAME}} and i am learning the {{COURSE}}"
+  - name: printing the variables from task level and it will overide the variable from play
+    vars:
+      COURSE: "JAVA"
+    ansible.builtin.debug:
+      msg: "my name is {{NAME}} and i am learning the {{COURSE}}"

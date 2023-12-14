@@ -1,0 +1,20 @@
+- name: Check whether the user exists or not using conditions
+  hosts: localhost
+  vars:
+    USER: "Roboshop"
+  tasks:
+  - name: Checking user exists or not
+    ansible.builtin.command: id {{USER}}
+    register: USERID
+    ignore_errors: true
+  - name: printing 
+    ansible.builtin.debug:
+      msg: "The output is {{USERID}}"
+  - name: printing the status
+    ansible.builtin.debug:
+      msg: "{{USERID.rc}}"
+  - name: creating the user
+    become: yes
+    ansible.builtin.user:
+      name: "{{USER}}"
+    when: USERID.rc !=0

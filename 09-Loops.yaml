@@ -1,10 +1,10 @@
 - name: Loops
   hosts: localhost
-  task:
+  tasks:
   - name: printing the multiple names using loops
     ansible.builtin.debug:
       msg: "My pricing team is {{item}}"
-      
+
     loop:
     - suhail
     - shaik

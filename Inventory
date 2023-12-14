@@ -1,4 +1,5 @@
 [ansiblehost]
 18.208.139.63
+
 [ansiblehost:vars]
 INVENTORY_USERNAME=suhail

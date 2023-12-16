@@ -1,5 +1,8 @@
 [ansiblehost]
 172.31.17.133
 
+[aparna]
+0.0.0.0
+
 [ansiblehost:vars]
 USERNAME=suhail

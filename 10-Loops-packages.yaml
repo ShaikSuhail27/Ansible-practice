@@ -1,8 +1,8 @@
 - name: installing the multiple packages
-  hosts: ansiblehost
+  hosts: localhost
   become: yes
   tasks:
-  - name: multiple packages installation
+  - name:  "installing the {{item}} package"
     ansible.builtin.yum:
       name: "{{item}}"
       state: installed
